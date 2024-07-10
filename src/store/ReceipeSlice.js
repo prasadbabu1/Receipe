@@ -9,7 +9,8 @@ const ReceipeSlice = createSlice({
     },
     RemoveFavourite: (state, action) => {
       return state.filter((receipe, index) => {
-        return receipe.label !== action.payload.ind;
+        return receipe.recipe.label !== action.payload.ind;
+
       });
     },
   },
